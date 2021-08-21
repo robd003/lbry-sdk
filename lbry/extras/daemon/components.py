@@ -548,7 +548,7 @@ class UPnPComponent(Component):
         while True:
             if now:
                 await self._maintain_redirects()
-            await asyncio.sleep(360, loop=self.component_manager.loop)
+            await asyncio.sleep(360)
 
     async def _maintain_redirects(self):
         # setup the gateway if necessary
@@ -670,7 +670,7 @@ class UPnPComponent(Component):
             log.info("Removing upnp redirects: %s", self.upnp_redirects)
             await asyncio.wait([
                 self.upnp.delete_port_mapping(port, protocol) for protocol, port in self.upnp_redirects.items()
-            ], loop=self.component_manager.loop)
+            ])
         if self._maintain_redirects_task and not self._maintain_redirects_task.done():
             self._maintain_redirects_task.cancel()
 
