@@ -34,7 +34,7 @@ setup(
         ],
     },
     install_requires=[
-        'aiohttp==3.5.4',
+        'aiohttp==3.7.4.post0',
         'aioupnp==0.0.18',
         'appdirs==1.4.3',
         'certifi>=2018.11.29',
@@ -42,7 +42,7 @@ setup(
         'distro==1.4.0',
         'base58==1.0.0',
         'cffi==1.13.2',
-        'cryptography==2.5',
+        'cryptography==3.4.7',
         'protobuf==3.17.2',
         'msgpack==0.6.1',
         'prometheus_client==0.7.1',

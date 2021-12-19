@@ -46,10 +46,10 @@ class ManagedDownloadSource:
         self._added_on = added_on
         self.analytics_manager = analytics_manager
 
-        self.saving = asyncio.Event(loop=self.loop)
-        self.finished_writing = asyncio.Event(loop=self.loop)
-        self.started_writing = asyncio.Event(loop=self.loop)
-        self.finished_write_attempt = asyncio.Event(loop=self.loop)
+        self.saving = asyncio.Event()
+        self.finished_writing = asyncio.Event()
+        self.started_writing = asyncio.Event()
+        self.finished_write_attempt = asyncio.Event()
 
     # @classmethod
     # async def create(cls, loop: asyncio.AbstractEventLoop, config: 'Config', file_path: str,
