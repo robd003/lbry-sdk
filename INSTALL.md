@@ -9,12 +9,12 @@ Here's a video walkthrough of this setup, which is itself hosted by the LBRY net
 
 ## Prerequisites
 
-Running `lbrynet` from source requires Python 3.7. Get the installer for your OS [here](https://www.python.org/downloads/release/python-370/).
+Running `lbrynet` from source requires Python 3.9. Get the installer for your OS [here](https://www.python.org/downloads/release/python-399/).
 
-After installing Python 3.7, you'll need to install some additional libraries depending on your operating system.
+After installing Python 3.9, you'll need to install some additional libraries depending on your operating system.
 
 Because of [issue #2769](https://github.com/lbryio/lbry-sdk/issues/2769)
-at the moment the `lbrynet` daemon will only work correctly with Python 3.7.
+at the moment the `lbrynet` daemon will only work correctly with Python 3.9.
 If Python 3.8+ is used, the daemon will start but the RPC server
 may not accept messages, returning the following:
 ```
@@ -44,10 +44,10 @@ On Ubuntu (we recommend 18.04 or 20.04), install the following:
 ```
 sudo add-apt-repository ppa:deadsnakes/ppa
 sudo apt-get update
-sudo apt-get install build-essential python3.7 python3.7-dev git python3.7-venv libssl-dev python-protobuf
+sudo apt-get install build-essential python3.9 python3.9-dev git python3.9-venv libssl-dev python-protobuf
 ```
 
-The [deadsnakes PPA](https://launchpad.net/~deadsnakes/+archive/ubuntu/ppa) provides Python 3.7
+The [deadsnakes PPA](https://launchpad.net/~deadsnakes/+archive/ubuntu/ppa) provides Python 3.9
 for those Ubuntu distributions that no longer have it in their
 official repositories.
 
@@ -67,7 +67,7 @@ cd lbry-sdk
 
 Create a Python virtual environment for lbry-sdk:
 ```bash
-python3.7 -m venv lbry-venv
+python3.9 -m venv lbry-venv
 ```
 
 Activate virtual environment:
@@ -75,7 +75,7 @@ Activate virtual environment:
 source lbry-venv/bin/activate
 ```
 
-Make sure you're on Python 3.7+ as default in the virtual environment:
+Make sure you're on Python 3.9+ as default in the virtual environment:
 ```bash
 python --version
 ```
